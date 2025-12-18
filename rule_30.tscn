@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtb8wuox0pesv"]
+
+[ext_resource type="Script" uid="uid://lbtfjv5rk8dk" path="res://rule_30.gd" id="1_lg3pq"]
+[ext_resource type="Texture2D" uid="uid://cuqir2qmh0p8l" path="res://tiles.png" id="2_1aryq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i6ly2"]
+texture = ExtResource("2_1aryq")
+texture_region_size = Vector2i(10, 10)
+0:0/0 = 0
+1:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_bc2ma"]
+tile_size = Vector2i(10, 10)
+uv_clipping = true
+sources/0 = SubResource("TileSetAtlasSource_i6ly2")
+
+[node name="Rule30" type="Node2D"]
+script = ExtResource("1_lg3pq")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_bc2ma")
